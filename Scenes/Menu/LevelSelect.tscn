@@ -1,0 +1,218 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://m5x7 level select.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sripts/ChangeScene.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/levels/Level_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/levels/Level_2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sripts/LevelSelect.gd" type="Script" id=5]
+[ext_resource path="res://Sripts/Backbutton.gd" type="Script" id=6]
+[ext_resource path="res://assets/Arrow.png" type="Texture" id=7]
+[ext_resource path="res://assets/Arrow2.png" type="Texture" id=8]
+[ext_resource path="res://assets/LS Border.png" type="Texture" id=9]
+[ext_resource path="res://assets/sfx/mousehover.wav" type="AudioStream" id=10]
+[ext_resource path="res://Scenes/levels/Level_3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/levels/Level_4.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/levels/Level_5.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/levels/Level_7.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/levels/Level_6.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/levels/Level_8.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/levels/Level_9.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/levels/Level_10.tscn" type="PackedScene" id=18]
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 304.0
+margin_bottom = 176.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 56.0
+margin_top = 36.0
+margin_right = 267.0
+margin_bottom = 160.0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level_1" type="Button" parent="GridContainer"]
+margin_right = 17.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "1"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 3 )
+
+[node name="Level_2" type="Button" parent="GridContainer"]
+margin_left = 21.0
+margin_right = 38.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "2"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 4 )
+
+[node name="Level_3" type="Button" parent="GridContainer"]
+margin_left = 42.0
+margin_right = 59.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "3"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 11 )
+
+[node name="Level_4" type="Button" parent="GridContainer"]
+margin_left = 63.0
+margin_right = 80.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "4"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 12 )
+
+[node name="Level_5" type="Button" parent="GridContainer"]
+margin_left = 84.0
+margin_right = 101.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "5"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 13 )
+
+[node name="Level_6" type="Button" parent="GridContainer"]
+margin_left = 105.0
+margin_right = 122.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "6"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 15 )
+
+[node name="Level_7" type="Button" parent="GridContainer"]
+margin_left = 126.0
+margin_right = 143.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "7"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 14 )
+
+[node name="Level_8" type="Button" parent="GridContainer"]
+margin_left = 147.0
+margin_right = 164.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "8"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 16 )
+
+[node name="Level_9" type="Button" parent="GridContainer"]
+margin_left = 168.0
+margin_right = 185.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "9"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 17 )
+
+[node name="Level_10" type="Button" parent="GridContainer"]
+margin_left = 189.0
+margin_right = 211.0
+margin_bottom = 18.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "10"
+flat = true
+script = ExtResource( 2 )
+scene = ExtResource( 18 )
+
+[node name="Back" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 43.0
+margin_bottom = 19.0
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -14.0
+[connection signal="mouse_entered" from="GridContainer/Level_1" to="GridContainer/Level_1" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_2" to="GridContainer/Level_2" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_3" to="GridContainer/Level_3" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_4" to="GridContainer/Level_4" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_5" to="GridContainer/Level_5" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_6" to="GridContainer/Level_6" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_7" to="GridContainer/Level_7" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_8" to="GridContainer/Level_8" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_9" to="GridContainer/Level_9" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="GridContainer/Level_10" to="GridContainer/Level_10" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Back" to="Back" method="_on_Back_mouse_entered"]
+[connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]

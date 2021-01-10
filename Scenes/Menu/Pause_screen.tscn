@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://m5x7.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sripts/Pausebuttons.gd" type="Script" id=2]
+
+[node name="Pause_screen" type="PopupPanel"]
+pause_mode = 2
+self_modulate = Color( 0.443137, 0.482353, 0.745098, 0.854902 )
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 336.0
+margin_bottom = 208.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 348.0
+margin_bottom = 220.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+margin_top = 82.0
+margin_right = 344.0
+margin_bottom = 106.0
+hint_tooltip = "Resume button"
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+custom_colors/font_color_pressed = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "Resume"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+margin_top = 110.0
+margin_right = 344.0
+margin_bottom = 134.0
+hint_tooltip = "Resume button"
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+custom_colors/font_color_pressed = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "Menu"
+flat = true
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_Menu_pressed"]

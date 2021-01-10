@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Title.png" type="Texture" id=1]
+[ext_resource path="res://m5x7.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sripts/ChangeScene.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Menu/LevelSelect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sfx/mousehover.wav" type="AudioStream" id=5]
+[ext_resource path="res://Scenes/Menu/Tutorial.tscn" type="PackedScene" id=6]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="TextureRect" parent="."]
+margin_left = 20.0
+margin_top = 4.89088
+margin_right = 301.0
+margin_bottom = 100.891
+texture = ExtResource( 1 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 56.0
+margin_right = 301.0
+margin_bottom = 214.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_top = 53.0
+margin_right = 281.0
+margin_bottom = 77.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "Play"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = ExtResource( 4 )
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+margin_top = 81.0
+margin_right = 281.0
+margin_bottom = 105.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "Tutorial"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = ExtResource( 6 )
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 95.0
+margin_right = 281.0
+margin_bottom = 119.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.364706, 0.172549, 0.156863, 1 )
+custom_colors/font_color_hover = Color( 0.541176, 0.282353, 0.211765, 1 )
+enabled_focus_mode = 0
+text = "Quit"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -14.0
+[connection signal="mouse_entered" from="VBoxContainer/Play" to="VBoxContainer/Play" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/Tutorial" to="VBoxContainer/Tutorial" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_Quit_pressed"]

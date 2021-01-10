@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/LS Border.png" type="Texture" id=1]
+[ext_resource path="res://Sripts/Backbutton.gd" type="Script" id=2]
+[ext_resource path="res://assets/Arrow2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Arrow.png" type="Texture" id=4]
+[ext_resource path="res://m5x7.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/Commands.png" type="Texture" id=6]
+[ext_resource path="res://assets/sfx/mousehover.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+font_data = ExtResource( 5 )
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 304.0
+margin_bottom = 176.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 43.0
+margin_bottom = 19.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = 48.0
+margin_top = 38.0
+margin_right = 272.0
+margin_bottom = 134.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.541176, 0.282353, 0.211765, 1 )
+text = "	Sokoban is a puzzle game created in 1982
+Where the goal is to push boxes to the storage locations."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 43.0
+margin_top = 80.0
+margin_right = 283.0
+margin_bottom = 144.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -14.0
+[connection signal="mouse_entered" from="Back" to="Back" method="_on_Back_mouse_entered"]
+[connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]
